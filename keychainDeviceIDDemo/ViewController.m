@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-#import "keychainDeviceID.h"
+#import "KeychainDeviceID.h"
 
 @interface ViewController ()
 
@@ -19,10 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *UUID = [keychainDeviceID getUUID];
+    NSString *UUID = [KeychainDeviceID getUUID];
     NSLog(@"uuid = %@",UUID);
     
-    NSString *openUDID = [keychainDeviceID getOpenUDID];
+    NSString *openUDID = [KeychainDeviceID getOpenUDID];
     NSLog(@"openUdid = %@",openUDID);
     self.uuidLable.text = [NSString stringWithFormat:@"UUID\n%@",UUID];
     self.openUdidLable.text = [NSString stringWithFormat:@"openUDID\n%@",openUDID];;

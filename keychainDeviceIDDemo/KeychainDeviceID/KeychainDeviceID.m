@@ -1,31 +1,31 @@
 //
-//  keychainDeviceID.m
-//  keychainDeviceID
+//  KeychainDeviceID.m
+//  KeychainDeviceID
 //
 //  Created by C.K.Lian on 16/3/11.
 //  Copyright © 2016年 C.K.Lian. All rights reserved.
 //
 
-#import "keychainDeviceID.h"
+#import "KeychainDeviceID.h"
 #import <Security/Security.h>
 #include "OpenUDID.h"
 
 //在Keychain中的标识，这里取bundleIdentifier + UUID / OpenUDID
 #define KEYCHAIN_IDENTIFIER(a)  ([NSString stringWithFormat:@"%@_%@",[[NSBundle mainBundle] bundleIdentifier],a])
 
-#define isNull(a) (a==nil ||\
+#define KCIDisNull(a) (a==nil ||\
                    a==NULL ||\
                    (NSNull *)(a)==[NSNull null] ||\
                    ((NSString *)a).length==0)
 
-@implementation keychainDeviceID
+@implementation KeychainDeviceID
 
 + (NSString *)getUUID
 {
     //读取keychain缓存
     NSString *deviceID = [self load:KEYCHAIN_IDENTIFIER(@"UUID")];
     //不存在，生成UUID
-    if (isNull(deviceID))
+    if (KCIDisNull(deviceID))
     {
         CFUUIDRef uuid_ref = CFUUIDCreate(kCFAllocatorDefault);
         CFStringRef uuid_string_ref= CFUUIDCreateString(kCFAllocatorDefault, uuid_ref);
@@ -33,13 +33,13 @@
         CFRelease(uuid_ref);
         deviceID = [NSString stringWithString:(__bridge NSString*)uuid_string_ref];
         deviceID = [deviceID lowercaseString];
-        if (!isNull(deviceID))
+        if (!KCIDisNull(deviceID))
         {
             [self save:KEYCHAIN_IDENTIFIER(@"UUID") data:deviceID];
         }
         CFRelease(uuid_string_ref);
     }
-    if (isNull(deviceID)) {
+    if (KCIDisNull(deviceID)) {
         NSLog(@"get deviceID error!");
     }
     return deviceID;
@@ -49,17 +49,17 @@
 {
     //读取keychain缓存
     NSString *deviceID = [self load:KEYCHAIN_IDENTIFIER(@"OpenUDID")];
-    if (isNull(deviceID))
+    if (KCIDisNull(deviceID))
     {
         //不存在，生成openUDID
         deviceID = [OpenUDID value];
         
-        if (!isNull(deviceID))
+        if (!KCIDisNull(deviceID))
         {
             [self save:KEYCHAIN_IDENTIFIER(@"OpenUDID") data:deviceID];
         }
     }
-    if (isNull(deviceID)) {
+    if (KCIDisNull(deviceID)) {
         NSLog(@"get deviceID error!");
     }
     return deviceID;

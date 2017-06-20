@@ -15,8 +15,8 @@
 		431DBDFD1DBBAEB9008F2FF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431DBDFB1DBBAEB9008F2FF9 /* LaunchScreen.storyboard */; };
 		431DBE081DBBAEB9008F2FF9 /* keychainDeviceIDDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 431DBE071DBBAEB9008F2FF9 /* keychainDeviceIDDemoTests.m */; };
 		431DBE131DBBAEB9008F2FF9 /* keychainDeviceIDDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 431DBE121DBBAEB9008F2FF9 /* keychainDeviceIDDemoUITests.m */; };
-		431DBE251DBBAEDF008F2FF9 /* keychainDeviceID.m in Sources */ = {isa = PBXBuildFile; fileRef = 431DBE221DBBAEDF008F2FF9 /* keychainDeviceID.m */; };
-		431DBE261DBBAEDF008F2FF9 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 431DBE241DBBAEDF008F2FF9 /* OpenUDID.m */; };
+		B4B59EFA1EF8E9480013B11C /* KeychainDeviceID.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B59EF71EF8E9480013B11C /* KeychainDeviceID.m */; };
+		B4B59EFB1EF8E9480013B11C /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B59EF91EF8E9480013B11C /* OpenUDID.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +53,10 @@
 		431DBE0E1DBBAEB9008F2FF9 /* keychainDeviceIDDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = keychainDeviceIDDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		431DBE121DBBAEB9008F2FF9 /* keychainDeviceIDDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = keychainDeviceIDDemoUITests.m; sourceTree = "<group>"; };
 		431DBE141DBBAEB9008F2FF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		431DBE211DBBAEDF008F2FF9 /* keychainDeviceID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keychainDeviceID.h; sourceTree = "<group>"; };
-		431DBE221DBBAEDF008F2FF9 /* keychainDeviceID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = keychainDeviceID.m; sourceTree = "<group>"; };
-		431DBE231DBBAEDF008F2FF9 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
-		431DBE241DBBAEDF008F2FF9 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		B4B59EF61EF8E9480013B11C /* KeychainDeviceID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainDeviceID.h; sourceTree = "<group>"; };
+		B4B59EF71EF8E9480013B11C /* KeychainDeviceID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainDeviceID.m; sourceTree = "<group>"; };
+		B4B59EF81EF8E9480013B11C /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
+		B4B59EF91EF8E9480013B11C /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 		431DBDEC1DBBAEB9008F2FF9 /* keychainDeviceIDDemo */ = {
 			isa = PBXGroup;
 			children = (
-				431DBE201DBBAEDF008F2FF9 /* keychainDeviceID */,
+				B4B59EF51EF8E9480013B11C /* KeychainDeviceID */,
 				431DBDF01DBBAEB9008F2FF9 /* AppDelegate.h */,
 				431DBDF11DBBAEB9008F2FF9 /* AppDelegate.m */,
 				431DBDF31DBBAEB9008F2FF9 /* ViewController.h */,
@@ -147,15 +147,15 @@
 			path = keychainDeviceIDDemoUITests;
 			sourceTree = "<group>";
 		};
-		431DBE201DBBAEDF008F2FF9 /* keychainDeviceID */ = {
+		B4B59EF51EF8E9480013B11C /* KeychainDeviceID */ = {
 			isa = PBXGroup;
 			children = (
-				431DBE211DBBAEDF008F2FF9 /* keychainDeviceID.h */,
-				431DBE221DBBAEDF008F2FF9 /* keychainDeviceID.m */,
-				431DBE231DBBAEDF008F2FF9 /* OpenUDID.h */,
-				431DBE241DBBAEDF008F2FF9 /* OpenUDID.m */,
+				B4B59EF61EF8E9480013B11C /* KeychainDeviceID.h */,
+				B4B59EF71EF8E9480013B11C /* KeychainDeviceID.m */,
+				B4B59EF81EF8E9480013B11C /* OpenUDID.h */,
+				B4B59EF91EF8E9480013B11C /* OpenUDID.m */,
 			);
-			path = keychainDeviceID;
+			path = KeychainDeviceID;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,9 +290,9 @@
 			files = (
 				431DBDF51DBBAEB9008F2FF9 /* ViewController.m in Sources */,
 				431DBDF21DBBAEB9008F2FF9 /* AppDelegate.m in Sources */,
-				431DBE251DBBAEDF008F2FF9 /* keychainDeviceID.m in Sources */,
+				B4B59EFA1EF8E9480013B11C /* KeychainDeviceID.m in Sources */,
 				431DBDEF1DBBAEB9008F2FF9 /* main.m in Sources */,
-				431DBE261DBBAEDF008F2FF9 /* OpenUDID.m in Sources */,
+				B4B59EFB1EF8E9480013B11C /* OpenUDID.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +518,7 @@
 				431DBE191DBBAEB9008F2FF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		431DBE1A1DBBAEB9008F2FF9 /* Build configuration list for PBXNativeTarget "keychainDeviceIDDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +527,7 @@
 				431DBE1C1DBBAEB9008F2FF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		431DBE1D1DBBAEB9008F2FF9 /* Build configuration list for PBXNativeTarget "keychainDeviceIDDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +536,7 @@
 				431DBE1F1DBBAEB9008F2FF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
